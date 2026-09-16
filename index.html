@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>TestClosed Marketing — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff;
+  --bg-soft:#fbfcff;
+  --bg-tint:#f2f7ff;
+  --card:#ffffff;
+  --line:#e4ecf9;
+  --line-soft:#f0f5fd;
+  --ink:#152238;
+  --ink-2:#4a6084;
+  --ink-3:#8296b3;
+  --blue:#2563eb;
+  --blue-2:#5b95f7;
+  --blue-3:#a9c8fc;
+  --blue-wash:#f0f6ff;
+  --green:#12a05f;
+  --shadow:0 1px 2px rgba(21,34,56,.03), 0 10px 30px rgba(37,99,235,.05);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;color-scheme:light;background:#ffffff}
+body{
+  margin:0; background:#ffffff; color:var(--ink);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+a{color:var(--blue);text-decoration:none}
+
+.nav{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-soft)}
+.nav-in{max-width:1080px;margin:0 auto;padding:15px 22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:-.02em;font-size:17px;color:var(--ink)}
+.logo .mark{width:27px;height:27px;border-radius:8px;background:linear-gradient(135deg,var(--blue),var(--blue-2));display:grid;place-items:center;color:#fff;font-size:13px;font-weight:800}
+.nav-links{margin-left:auto;display:flex;gap:20px;flex-wrap:wrap}
+.nav-links a{color:var(--ink-2);font-size:14px;font-weight:500}
+.nav-links a:hover{color:var(--blue)}
+
+.hero{padding:80px 0 56px;background:radial-gradient(1000px 420px at 78% -18%, var(--blue-wash), transparent 72%)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);background:var(--blue-wash);border:1px solid var(--line);padding:6px 14px;border-radius:999px}
+h1{font-size:clamp(34px,5.6vw,56px);line-height:1.08;letter-spacing:-.038em;margin:22px 0 0;font-weight:800;max-width:15ch}
+h1 .hl{color:var(--blue)}
+.sub{font-size:clamp(16px,2vw,19px);color:var(--ink-2);max-width:60ch;margin:22px 0 0}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px;align-items:center}
+.btn{display:inline-block;padding:13px 24px;border-radius:11px;font-weight:600;font-size:15px;cursor:pointer;border:none;font-family:inherit}
+.btn-p{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(37,99,235,.22)}
+.btn-s{border:1px solid var(--line);color:var(--ink);background:var(--card)}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:50px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:22px 19px;box-shadow:var(--shadow)}
+.stat .n{font-size:clamp(25px,3.5vw,33px);font-weight:800;letter-spacing:-.03em;color:var(--blue);line-height:1.1}
+.stat .l{font-size:12.5px;color:var(--ink-3);margin-top:8px;line-height:1.5}
+
+.strip{margin-top:44px;padding-top:26px;border-top:1px solid var(--line-soft)}
+.strip-l{font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.strip-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.chip{border:1px solid var(--line);background:var(--bg-soft);border-radius:9px;padding:8px 14px;font-size:13.5px;color:var(--ink-2);font-weight:500}
+
+section{padding:70px 0}
+.sec-soft{background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.sec-head{max-width:66ch}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--blue)}
+h2{font-size:clamp(25px,3.5vw,35px);letter-spacing:-.032em;margin:10px 0 0;font-weight:800;line-height:1.18}
+.lead{color:var(--ink-2);margin-top:13px;font-size:16.5px}
+h3{font-size:19px;letter-spacing:-.02em;margin:0 0 8px;font-weight:700}
+
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:26px;box-shadow:var(--shadow)}
+.card p{color:var(--ink-2);font-size:14.5px;margin:0}
+.ico{width:40px;height:40px;border-radius:11px;background:var(--blue-wash);color:var(--blue);display:grid;place-items:center;margin-bottom:15px}
+
+.case{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);margin-top:28px}
+.case-top{padding:28px 30px;border-bottom:1px solid var(--line-soft)}
+.badge{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:var(--blue-wash);color:var(--blue);border:1px solid var(--line)}
+.badge.live{background:#eaf9f1;color:#0c7a47;border-color:#c9ecd9}
+.case-title{font-size:clamp(20px,2.8vw,27px);font-weight:800;letter-spacing:-.028em;margin:12px 0 0}
+.case-meta{color:var(--ink-3);font-size:14px;margin:6px 0 0}
+.case-body{padding:30px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.block-label{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
+ul.tight{margin:0;padding-left:18px;color:var(--ink-2);font-size:14.8px}
+ul.tight li{margin-bottom:8px}
+.chartbox{background:var(--bg-tint);border:1px solid var(--line-soft);border-radius:14px;padding:22px;margin-top:24px}
+.chart-title{font-size:13px;font-weight:700;color:var(--ink);margin:0 0 3px}
+.chart-note{font-size:12.5px;color:var(--ink-3);margin:0 0 16px}
+.scroll{overflow-x:auto}
+svg{display:block;max-width:100%;height:auto}
+.result-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+.res{background:var(--blue-wash);border:1px solid var(--line);border-radius:13px;padding:16px}
+.res .n{font-size:22px;font-weight:800;color:var(--blue);letter-spacing:-.02em}
+.res .l{font-size:12px;color:var(--ink-2);margin-top:4px}
+.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.tag{font-size:12.5px;color:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:5px 11px;background:var(--bg-soft)}
+.fill{border-style:dashed;color:var(--ink-3)}
+
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.pillar{border:1px solid var(--line);border-radius:13px;padding:19px;background:var(--bg)}
+.pillar .num{font-size:12px;font-weight:800;color:var(--blue);letter-spacing:.08em}
+.pillar h4{margin:7px 0 6px;font-size:15.5px}
+.pillar p{margin:0;font-size:13.5px;color:var(--ink-2)}
+
+.tablewrap{overflow-x:auto;margin-top:32px;border:1px solid var(--line);border-radius:15px;background:var(--card);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14.5px}
+th,td{text-align:left;padding:15px 19px;border-bottom:1px solid var(--line-soft)}
+th{background:var(--bg-tint);font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-2);font-weight:700}
+tr:last-child td{border-bottom:none}
+td strong{color:var(--blue)}
+
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:34px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:19px;box-shadow:var(--shadow)}
+.step .sn{width:27px;height:27px;border-radius:9px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:12.5px;font-weight:800;margin-bottom:12px}
+.step h4{margin:0 0 5px;font-size:14.5px}
+.step p{margin:0;font-size:13px;color:var(--ink-2)}
+
+.contact{background:var(--blue-wash);border:1px solid var(--line);border-radius:22px;padding:48px 40px;text-align:center}
+.contact h2{margin:0}
+.contact p{color:var(--ink-2);max-width:52ch;margin:15px auto 0}
+.mailrow{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;align-items:center;margin-top:28px}
+.mailbox{display:inline-flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:11px;padding:12px 18px;font-size:15px;font-weight:600;color:var(--ink);user-select:all;word-break:break-all}
+#copied{font-size:13px;color:var(--green);font-weight:600;margin-top:12px;min-height:18px}
+footer{padding:36px 0;border-top:1px solid var(--line-soft);color:var(--ink-3);font-size:13.5px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+@media (max-width:860px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .grid-3,.pillars{grid-template-columns:1fr}
+  .cols{grid-template-columns:1fr;gap:24px}
+  .result-row{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  section{padding:52px 0}
+  .case-body,.case-top{padding:22px}
+  .contact{padding:34px 22px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <div class="logo"><span class="mark">T</span> TestClosed Marketing</div>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#webnapp">Webnapp</a>
+      <a href="#vijaya">Vijaya Sweets</a>
+      <a href="#sripada">Sripada Astro</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Growth marketing · Outbound systems · Brand positioning</span>
+    <h1>I turn businesses into <span class="hl">organisations</span>.</h1>
+    <p class="sub">TestClosed Marketing builds the systems a business needs to stop depending on referrals: verified lead data, WhatsApp campaigns at scale, local SEO and trust, and positioning that lets a product charge what it's worth. Below are three engagements, in three different sectors, each run on a different plan of action.</p>
+    <div class="cta-row">
+      <a class="btn btn-p" href="#work">See the case studies</a>
+      <a class="btn btn-s" href="#contact">Work with me</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n">8.5</div><div class="l">Customers closed per 1,000 WhatsApp messages sent</div></div>
+      <div class="stat"><div class="n">₹4.25L</div><div class="l">Revenue generated per 1,000-message campaign batch</div></div>
+      <div class="stat"><div class="n">₹425</div><div class="l">Revenue generated per single message sent</div></div>
+      <div class="stat"><div class="n">0.85%</div><div class="l">Cold outbound message-to-sale conversion rate</div></div>
+    </div>
+
+    <div class="strip">
+      <div class="strip-l">Sectors I build for</div>
+      <div class="strip-row">
+        <span class="chip">Software &amp; IT services</span>
+        <span class="chip">FMCG &amp; sweets retail</span>
+        <span class="chip">Mobile apps</span>
+        <span class="chip">Restaurants</span>
+        <span class="chip">Clothing &amp; retail stores</span>
+        <span class="chip">Local service businesses</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="sec-soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">What I do</div>
+      <h2>Three systems I install for every client</h2>
+      <p class="lead">I don't sell "digital marketing". I build one demand engine, one trust layer and one positioning story, then measure all three.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></div>
+        <h3>Data mining &amp; outbound</h3>
+        <p>A custom Google Maps scraper pulls verified business names, categories and phone numbers by area and niche. That list feeds WhatsApp Business API campaigns with segmented messaging, the highest-converting channel I've tested.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l2.6 5.5 6 .9-4.3 4.2 1 6-5.3-2.8L6.7 19.6l1-6L3.4 9.4l6-.9z"/></svg></div>
+        <h3>Local SEO &amp; trust</h3>
+        <p>Google Business Profile optimisation, Maps integration, review and rating generation, and on-page SEO, so every outbound conversation lands on a business that already looks credible when the prospect searches it.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 17l5-6 4 3 5-7"/><path d="M3 21h18"/></svg></div>
+        <h3>Positioning &amp; community</h3>
+        <p>Packaging, price tier and brand story work that moves a product up-market, plus on-ground community activation: events, sampling and word-of-mouth loops that outperform paid ads for regional brands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Featured case studies</div>
+      <h2>Three sectors. Three plans of action. Three outcomes.</h2>
+      <p class="lead">Each case below is deliberately from a different industry and run on a different strategy, so you can see how the thinking adapts: a B2B software company grown through cold outbound, a sweets brand grown through packaging and community, and a mobile app grown through a dual outbound-plus-organic engine. Every one follows the same structure: the problem, what I built, what changed.</p>
+    </div>
+
+    <article class="case" id="webnapp">
+      <div class="case-top">
+        <span class="badge">Case 01 · B2B Software</span>
+        <h3 class="case-title">Webnapp — Software Development Company</h3>
+        <p class="case-meta">Plan of action: data-driven cold outbound + local search credibility</p>
+      </div>
+      <div class="case-body">
+        <div class="cols">
+          <div>
+            <div class="block-label">The challenge</div>
+            <ul class="tight">
+              <li>A capable dev shop with no predictable pipeline. Sales depended entirely on referrals.</li>
+              <li>Invisible on Google Maps and local search, so inbound was near zero.</li>
+              <li>No list of the local businesses that actually needed an app: restaurants, clothing stores, retail.</li>
+              <li>A ₹50,000 ticket size meant every wasted conversation was expensive.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="block-label">What I built</div>
+            <ul class="tight">
+              <li><strong>Local SEO + Google Maps integration.</strong> Optimised the business profile, embedded Maps, and ran a structured review and ratings drive to build first-search credibility.</li>
+              <li><strong>Custom Google Maps scraper.</strong> Extracted restaurant and clothing-store contact data across target areas, segmented by category and location.</li>
+              <li><strong>WhatsApp API campaign engine.</strong> Category-specific pitches sent at scale, written for the pain each vertical actually feels.</li>
+              <li><strong>Closed the loop.</strong> Every reply routed through a qualification flow before it reached sales.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="chartbox">
+          <p class="chart-title">Campaign funnel, per 1,000 messages sent</p>
+          <p class="chart-note">Cold outbound to scraped local businesses via WhatsApp Business API.</p>
+          <div class="scroll">
+          <svg viewBox="0 0 700 250" role="img" aria-label="Funnel from 1000 businesses scraped to 8.5 customers closed">
+            <g font-family="Inter, sans-serif">
+              <rect x="150" y="18" width="520" height="40" rx="8" fill="var(--blue)"/>
+              <text x="140" y="43" text-anchor="end" font-size="13" fill="var(--ink-2)" font-weight="600">Businesses scraped</text>
+              <text x="166" y="43" font-size="14" fill="#fff" font-weight="700">1,000 verified local contacts</text>
+              <rect x="150" y="70" width="470" height="40" rx="8" fill="var(--blue-2)"/>
+              <text x="140" y="95" text-anchor="end" font-size="13" fill="var(--ink-2)" font-weight="600">Messages delivered</text>
+              <text x="166" y="95" font-size="14" fill="#fff" font-weight="700">1,000 WhatsApp campaigns</text>
+              <rect x="150" y="122" width="250" height="40" rx="8" fill="var(--blue-3)"/>
+              <text x="140" y="147" text-anchor="end" font-size="13" fill="var(--ink-2)" font-weight="600">Qualified replies</text>
+              <text x="166" y="147" font-size="14" fill="var(--ink)" font-weight="700">Routed to sales</text>
+              <rect x="150" y="174" width="130" height="40" rx="8" fill="var(--green)"/>
+              <text x="140" y="199" text-anchor="end" font-size="13" fill="var(--ink-2)" font-weight="600">Customers closed</text>
+              <text x="166" y="199" font-size="14" fill="#fff" font-weight="700">8.5 deals</text>
+              <text x="295" y="199" font-size="13" fill="var(--ink-2)" font-weight="600">= 0.85% conversion</text>
+              <text x="150" y="238" font-size="12" fill="var(--ink-3)">Average ticket ₹50,000 · Revenue per batch ≈ ₹4,25,000</text>
+            </g>
+          </svg>
+          </div>
+        </div>
+
+        <div class="chartbox">
+          <p class="chart-title">Revenue scaling at the same conversion rate</p>
+          <p class="chart-note">Projected from the measured 0.85% message-to-sale rate and ₹50,000 average ticket.</p>
+          <div class="scroll">
+          <svg viewBox="0 0 700 260" role="img" aria-label="Revenue at increasing message volumes">
+            <g font-family="Inter, sans-serif">
+              <line x1="60" y1="200" x2="680" y2="200" stroke="var(--line)" stroke-width="1.5"/>
+              <line x1="60" y1="20" x2="60" y2="200" stroke="var(--line)" stroke-width="1.5"/>
+              <line x1="60" y1="155" x2="680" y2="155" stroke="var(--line-soft)"/>
+              <line x1="60" y1="110" x2="680" y2="110" stroke="var(--line-soft)"/>
+              <line x1="60" y1="65" x2="680" y2="65" stroke="var(--line-soft)"/>
+              <text x="52" y="204" text-anchor="end" font-size="11" fill="var(--ink-3)">0</text>
+              <text x="52" y="159" text-anchor="end" font-size="11" fill="var(--ink-3)">₹11L</text>
+              <text x="52" y="114" text-anchor="end" font-size="11" fill="var(--ink-3)">₹21L</text>
+              <text x="52" y="69" text-anchor="end" font-size="11" fill="var(--ink-3)">₹32L</text>
+              <rect x="110" y="182" width="86" height="18" rx="5" fill="var(--blue-3)"/>
+              <text x="153" y="176" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">₹4.25L</text>
+              <text x="153" y="220" text-anchor="middle" font-size="12" fill="var(--ink-2)">1,000 msgs</text>
+              <text x="153" y="236" text-anchor="middle" font-size="11" fill="var(--ink-3)">8.5 deals · actual</text>
+              <rect x="260" y="155" width="86" height="45" rx="5" fill="var(--blue-2)"/>
+              <text x="303" y="148" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">₹10.6L</text>
+              <text x="303" y="220" text-anchor="middle" font-size="12" fill="var(--ink-2)">2,500 msgs</text>
+              <text x="303" y="236" text-anchor="middle" font-size="11" fill="var(--ink-3)">21 deals</text>
+              <rect x="410" y="110" width="86" height="90" rx="5" fill="var(--blue)"/>
+              <text x="453" y="103" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">₹21.2L</text>
+              <text x="453" y="220" text-anchor="middle" font-size="12" fill="var(--ink-2)">5,000 msgs</text>
+              <text x="453" y="236" text-anchor="middle" font-size="11" fill="var(--ink-3)">42 deals</text>
+              <rect x="560" y="20" width="86" height="180" rx="5" fill="var(--green)"/>
+              <text x="603" y="13" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">₹42.5L</text>
+              <text x="603" y="220" text-anchor="middle" font-size="12" fill="var(--ink-2)">10,000 msgs</text>
+              <text x="603" y="236" text-anchor="middle" font-size="11" fill="var(--ink-3)">85 deals</text>
+            </g>
+          </svg>
+          </div>
+        </div>
+
+        <div class="result-row">
+          <div class="res"><div class="n">8.5</div><div class="l">Customers per 1,000 messages</div></div>
+          <div class="res"><div class="n">₹4.25L</div><div class="l">Revenue per campaign batch</div></div>
+          <div class="res"><div class="n">₹425</div><div class="l">Revenue per message sent</div></div>
+          <div class="res"><div class="n">0.85%</div><div class="l">Cold-to-close conversion</div></div>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag">Google Maps scraper</span>
+          <span class="tag">WhatsApp Business API</span>
+          <span class="tag">Local SEO</span>
+          <span class="tag">Reviews &amp; ratings</span>
+          <span class="tag">Segmented outbound copy</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="case" id="vijaya">
+      <div class="case-top">
+        <span class="badge">Case 02 · FMCG &amp; Retail</span>
+        <h3 class="case-title">Vijaya Sweets — Premium Repositioning</h3>
+        <p class="case-meta">Plan of action: packaging-led repositioning + on-ground community activation</p>
+      </div>
+      <div class="case-body">
+        <div class="cols">
+          <div>
+            <div class="block-label">The challenge</div>
+            <ul class="tight">
+              <li>A quality sweet brand competing on price in a crowded market where every shop looks the same.</li>
+              <li>Packaging signalled "counter sweet", not "gift", so it never entered the high-value occasion basket.</li>
+              <li>No marketing function at all. I took the entire function over.</li>
+              <li>Paid advertising was inefficient for a product bought on trust and taste.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="block-label">What I did</div>
+            <ul class="tight">
+              <li><strong>Rebuilt packaging first.</strong> Treated the box as the primary media asset, since a sweet box travels into every home it's gifted to.</li>
+              <li><strong>Repositioned to premium.</strong> Moved the brand out of the price fight and into the gifting and celebration tier.</li>
+              <li><strong>Community-led distribution.</strong> Planned and ran events inside existing local communities rather than buying reach.</li>
+              <li><strong>Sampling at kitty parties and gatherings.</strong> Free tasting in the exact rooms where household purchase decisions get made, generating word-of-mouth from trusted voices.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="chartbox">
+          <p class="chart-title">Brand positioning shift</p>
+          <p class="chart-note">Moving up the value ladder instead of down the price ladder.</p>
+          <div class="scroll">
+          <svg viewBox="0 0 700 220" role="img" aria-label="Positioning shift from commodity sweet to premium gifting brand">
+            <g font-family="Inter, sans-serif">
+              <line x1="70" y1="180" x2="650" y2="180" stroke="var(--line)" stroke-width="1.5"/>
+              <line x1="70" y1="30" x2="70" y2="180" stroke="var(--line)" stroke-width="1.5"/>
+              <text x="360" y="208" text-anchor="middle" font-size="12" fill="var(--ink-3)">Perceived quality &amp; brand trust →</text>
+              <text x="30" y="105" text-anchor="middle" font-size="12" fill="var(--ink-3)" transform="rotate(-90 30 105)">Price tier →</text>
+              <defs><marker id="ar" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="var(--blue)"/></marker></defs>
+              <path d="M180 150 C 300 140, 380 90, 500 62" stroke="var(--blue)" stroke-width="2.5" fill="none" stroke-dasharray="6 5" marker-end="url(#ar)"/>
+              <circle cx="170" cy="152" r="9" fill="var(--ink-3)"/>
+              <text x="170" y="182" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink-2)">BEFORE</text>
+              <text x="170" y="128" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--ink-2)">Generic sweet shop</text>
+              <text x="170" y="112" text-anchor="middle" font-size="11.5" fill="var(--ink-3)">Price-led · plain packaging</text>
+              <circle cx="510" cy="58" r="11" fill="var(--blue)"/>
+              <text x="510" y="34" text-anchor="middle" font-size="13" font-weight="800" fill="var(--blue)">AFTER</text>
+              <text x="510" y="88" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--ink)">Premium gifting brand</text>
+              <text x="510" y="105" text-anchor="middle" font-size="11.5" fill="var(--ink-3)">Packaging-led · community-endorsed</text>
+            </g>
+          </svg>
+          </div>
+        </div>
+
+        <div class="block-label" style="margin-top:28px">The three pillars</div>
+        <div class="pillars">
+          <div class="pillar"><div class="num">01</div><h4>Packaging as media</h4><p>Redesigned boxes carry the brand into every home the sweet is gifted to. Zero incremental media cost, permanent shelf presence.</p></div>
+          <div class="pillar"><div class="num">02</div><h4>Community activation</h4><p>Events planned inside kitty parties and local gatherings, with sampling that lets the product sell itself to a captive, high-trust audience.</p></div>
+          <div class="pillar"><div class="num">03</div><h4>Premium price tier</h4><p>Positioned above the commodity segment so margin funds quality, and quality reinforces the positioning.</p></div>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag">Brand positioning</span>
+          <span class="tag">Packaging design direction</span>
+          <span class="tag">Community &amp; event marketing</span>
+          <span class="tag">Sampling strategy</span>
+          <span class="tag">Word-of-mouth loops</span>
+          <span class="tag fill">+ Add: sales lift %, repeat-order rate, price uplift</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="case" id="sripada">
+      <div class="case-top">
+        <span class="badge live">Case 03 · Mobile App · Live</span>
+        <h3 class="case-title">Sripada Astro Panchang — App Growth</h3>
+        <p class="case-meta">Plan of action: dual engine, outbound to practitioners + organic content for consumers</p>
+      </div>
+      <div class="case-body">
+        <div class="cols">
+          <div>
+            <div class="block-label">The challenge</div>
+            <ul class="tight">
+              <li>An astrology and panchang app that needs two very different audiences: practising astrologers and everyday users.</li>
+              <li>Astrologers are highly distributed across towns and districts. No ready-made database exists.</li>
+              <li>The core consumer audience is middle-aged and not reachable through typical performance ad targeting.</li>
+              <li>Paid install campaigns would be expensive relative to the app's revenue per user.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="block-label">The strategy in motion</div>
+            <ul class="tight">
+              <li><strong>Reapplying the proven playbook.</strong> The Maps scraper is mining astrologer listings area by area to build a professional outreach database.</li>
+              <li><strong>WhatsApp API outreach.</strong> Direct, personalised messaging positioning the app as a daily professional tool.</li>
+              <li><strong>Organic astrology education video.</strong> A content engine built to capture middle-aged organic audiences who search and watch rather than click ads.</li>
+              <li><strong>Two funnels, one brand.</strong> Practitioners give credibility, organic content gives volume.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="chartbox">
+          <p class="chart-title">The dual-engine growth model</p>
+          <p class="chart-note">Outbound buys speed. Organic content compounds. Running both de-risks acquisition.</p>
+          <div class="scroll">
+          <svg viewBox="0 0 700 280" role="img" aria-label="Two acquisition engines feeding the app">
+            <g font-family="Inter, sans-serif">
+              <rect x="20" y="20" width="270" height="105" rx="13" fill="var(--blue-wash)" stroke="var(--blue-3)"/>
+              <text x="40" y="47" font-size="11.5" font-weight="800" fill="var(--blue)" letter-spacing="1">ENGINE 01 · OUTBOUND</text>
+              <text x="40" y="70" font-size="14.5" font-weight="700" fill="var(--ink)">Astrologer acquisition</text>
+              <text x="40" y="91" font-size="12.5" fill="var(--ink-2)">Maps scraper → segmented list →</text>
+              <text x="40" y="108" font-size="12.5" fill="var(--ink-2)">WhatsApp API outreach → onboarding</text>
+              <rect x="20" y="145" width="270" height="105" rx="13" fill="var(--bg-tint)" stroke="var(--line)"/>
+              <text x="40" y="172" font-size="11.5" font-weight="800" fill="var(--blue)" letter-spacing="1">ENGINE 02 · ORGANIC</text>
+              <text x="40" y="195" font-size="14.5" font-weight="700" fill="var(--ink)">Astrology education video</text>
+              <text x="40" y="216" font-size="12.5" fill="var(--ink-2)">Search-led educational content →</text>
+              <text x="40" y="233" font-size="12.5" fill="var(--ink-2)">middle-aged audience → installs</text>
+              <path d="M300 72 L 400 118" stroke="var(--blue)" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+              <path d="M300 198 L 400 152" stroke="var(--blue)" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+              <rect x="415" y="95" width="255" height="80" rx="13" fill="var(--blue)"/>
+              <text x="542" y="128" text-anchor="middle" font-size="15.5" font-weight="800" fill="#fff">Sripada Astro Panchang</text>
+              <text x="542" y="150" text-anchor="middle" font-size="12.5" fill="#dfebff">Credibility from practitioners +</text>
+              <text x="542" y="166" text-anchor="middle" font-size="12.5" fill="#dfebff">volume from organic search</text>
+            </g>
+          </svg>
+          </div>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag">Data mining</span>
+          <span class="tag">WhatsApp API outreach</span>
+          <span class="tag">Organic video strategy</span>
+          <span class="tag">Audience segmentation</span>
+          <span class="tag fill">+ Add: installs, CPI, retention once live</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec-soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Results at a glance</div>
+      <h2>Different industries, same discipline</h2>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Client</th><th>Sector</th><th>Core problem</th><th>Plan of action</th><th>Outcome</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Webnapp</strong></td><td>Software development</td><td>No predictable pipeline, invisible in local search</td><td>Maps scraper + WhatsApp campaigns + local SEO and reviews</td><td><strong>8.5 customers / 1,000 messages · ≈₹4.25L per batch</strong></td></tr>
+          <tr><td><strong>Vijaya Sweets</strong></td><td>FMCG / sweets retail</td><td>Commodity perception, stuck in a price war</td><td>Packaging overhaul, premium positioning, community events and sampling</td><td><strong>Repositioned as a premium gifting brand</strong></td></tr>
+          <tr><td><strong>Sripada Astro</strong></td><td>Mobile app / astrology</td><td>Hard-to-reach practitioner and middle-aged audiences</td><td>Astrologer data mining + WhatsApp outreach + organic education video</td><td><strong>Live — dual acquisition engine in build</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">How I work</div>
+      <h2>A repeatable five-step engine</h2>
+      <p class="lead">The same sequence runs on a software company, a sweet brand and an astrology app. Only the inputs change.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="sn">1</div><h4>Find the buyer</h4><p>Define the exact category and geography that already has the problem the client solves.</p></div>
+      <div class="step"><div class="sn">2</div><h4>Build the list</h4><p>Mine verified contact data at scale instead of guessing at an audience.</p></div>
+      <div class="step"><div class="sn">3</div><h4>Fix the trust layer</h4><p>SEO, reviews, packaging or positioning, whatever the prospect checks before replying.</p></div>
+      <div class="step"><div class="sn">4</div><h4>Run the campaign</h4><p>Segmented WhatsApp, community activation or organic content, matched to how that audience buys.</p></div>
+      <div class="step"><div class="sn">5</div><h4>Measure &amp; scale</h4><p>Track cost per reply and per sale, then pour budget only into what already converts.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Let's build your pipeline.</h2>
+      <p>If you sell to local businesses or run a regional consumer brand, I can show you exactly where your next 100 customers are, and how much each one costs to reach.</p>
+      <div class="mailrow">
+        <a class="btn btn-p" id="mailBtn" href="mailto:saibalajimalisetty@gmail.com?subject=Project%20enquiry%20for%20TestClosed%20Marketing" target="_blank" rel="noopener">Start a conversation</a>
+        <span class="mailbox" id="mailText">saibalajimalisetty@gmail.com</span>
+        <button class="btn btn-s" id="copyBtn" type="button">Copy email</button>
+      </div>
+      <div id="copied"></div>
+    </div>
+    <footer>
+      <div>© 2026 TestClosed Marketing</div>
+      <div>Growth marketing · Outbound systems · Brand positioning</div>
+    </footer>
+  </div>
+</section>
+
+<script>
+(function(){
+  var email = "saibalajimalisetty@gmail.com";
+  var msg = document.getElementById("copied");
+  function flash(t){ if(msg){ msg.textContent = t; setTimeout(function(){ msg.textContent=""; }, 2600); } }
+  var copyBtn = document.getElementById("copyBtn");
+  if(copyBtn){
+    copyBtn.addEventListener("click", function(){
+      try{
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(email).then(function(){ flash("Email copied to clipboard"); },
+            function(){ flash("Select the address above to copy it"); });
+        } else {
+          var r = document.createRange();
+          r.selectNodeContents(document.getElementById("mailText"));
+          var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+          flash("Address selected — press Ctrl/Cmd + C");
+        }
+      }catch(e){ flash("Select the address above to copy it"); }
+    });
+  }
+  var mailBtn = document.getElementById("mailBtn");
+  if(mailBtn){
+    mailBtn.addEventListener("click", function(){
+      setTimeout(function(){ flash("If your mail app didn't open, copy the address above."); }, 900);
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
